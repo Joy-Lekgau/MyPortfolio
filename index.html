@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Lekgau — Portfolio</title>
+    <meta name="description" content="Portfolio of Joy Lekgau — projects, skills and contact." />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar" aria-hidden="false">
+                <!-- Replace the inline SVG below with your photo at assets/profile.jpg or a real URL -->
+                <picture>
+                    <img src="assets/profile.jpg" alt="Profile photo of Joy Lekgau" onerror="this.style.display='none'">
+                </picture>
+                <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Initials JL" style="max-width:100%;height:auto">
+                    <rect width="120" height="120" fill="#0b1220" />
+                    <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI,Arial" font-size="40" fill="#60a5fa">JL</text>
+                </svg>
+            </div>
+            <div>
+                <h1 class="name">Joy Lekgau</h1>
+                <div class="tagline">Frontend developer · Open to projects · HTML • CSS • JavaScript</div>
+
+                <!-- Location (update the text below to your actual city/country) -->
+                <div class="location" style="margin-top:8px">📍 <span id="location-text">Cape Town, South Africa</span></div>
+
+                <div style="margin-top:10px">
+                    <a href="#projects">Projects</a> · <a href="#skills">Languages</a> · <a href="#contact">Contact</a> ·
+                    <a class="cv-btn" href="assets/CV.pdf" download title="Download CV (PDF)" aria-label="Download CV (PDF)">Download CV</a>
+                </div>
+                <div style="margin-top:8px;color:var(--muted);font-size:0.95rem">
+                    <span id="clock" aria-live="polite" style="color:var(--accent);font-weight:600">--:--:--</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="grid">
+            <section id="projects" class="card">
+                <h2 style="margin-top:0">Projects</h2>
+                <div class="projects">
+                    <article class="project">
+                        <h4><a href="#">Project One — Portfolio Website</a></h4>
+                        <p>Small, responsive personal website built with semantic HTML and modern CSS. Replace this with a short project summary and link to repo.</p>
+                    </article>
+                    <article class="project">
+                        <h4><a href="#">Project Two — To-do App</a></h4>
+                        <p>Interactive to-do list built with vanilla JavaScript. Demonstrates DOM manipulation and localStorage usage.</p>
+                    </article>
+                    <article class="project">
+                        <h4><a href="#">Project Three — API Dashboard</a></h4>
+                        <p>Data dashboard consuming a public API, with charts and filtering. Good place to show screenshots and a live demo link.</p>
+                    </article>
+                </div>
+            </section>
+
+            <aside id="skills" class="card">
+                <h3 style="margin-top:0">Languages & tools</h3>
+                <div class="langs" aria-hidden="false">
+                    <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="HTML — MDN" aria-label="HTML documentation (opens in new tab)">
+                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML logo" class="lang-icon">
+                        <span>HTML</span>
+                    </a>
+                    <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" title="CSS — MDN" aria-label="CSS documentation (opens in new tab)">
+                        <img src="assets/langs/css.svg" alt="CSS logo" class="lang-icon">
+                        <span>CSS</span>
+                    </a>
+                    <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" title="JavaScript — MDN" aria-label="JavaScript documentation (opens in new tab)">
+                        <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" class="lang-icon">
+                        <span>JavaScript</span>
+                    </a>
+                    <a class="lang" href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python" aria-label="Python website (opens in new tab)">
+                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" class="lang-icon">
+                        <span>Python</span>
+                    </a>
+                    <a class="lang" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" title="Git" aria-label="Git website (opens in new tab)">
+                        <img src="https://cdn.simpleicons.org/git/F05032" alt="Git logo" class="lang-icon">
+                        <span>Git</span>
+                    </a>
+                    <a class="lang" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="React" aria-label="React website (opens in new tab)">
+                        <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" class="lang-icon">
+                        <span>React</span>
+                    </a>
+                </div>
+
+                <h4 style="margin-top:18px">Contact</h4>
+                <p id="contact" style="margin:0;color:var(--muted)">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            </aside>
+        </main>
+
+        <footer>
+            <small>Built with care — replace sample content with your own projects, images and links.</small>
+        </footer>
+    </div>
+
+            <script src="src/scripts.js"></script>
+</body>
+</html>
