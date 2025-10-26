@@ -13,26 +13,26 @@
             <div class="avatar" aria-hidden="false">
                 <!-- Replace the inline SVG below with your photo at assets/profile.jpg or a real URL -->
                 <picture>
-                    <img src="assets/profile.jpg" alt="Profile photo of Joy Lekgau" onerror="this.style.display='none'">
+                    <img src="assets/joy.jpg" alt="Profile photo of Joy Lekgau" onerror="this.style.display='none'">
                 </picture>
-                <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Initials JL" style="max-width:100%;height:auto">
+                <svg width="180" height="180" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Initials JL" style="max-width:100%;height:auto">
                     <rect width="120" height="120" fill="#0b1220" />
                     <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI,Arial" font-size="40" fill="#60a5fa">JL</text>
                 </svg>
             </div>
             <div>
                 <h1 class="name">Joy Lekgau</h1>
-                <div class="tagline">Frontend developer · Open to projects · HTML • CSS • JavaScript</div>
+                <div class="tagline">I'm a self-taught Software developer with a Certificate in Full Stack Development from App Academy and SheCodes Plus. I've built responsive web applications using HTML, CSS, JavaScript, and APls, and gained beginner experience with C#, SQL, and Angular. I have a strong passion for problem-solving, continuous learning, and teamwork.Motivated and detail-oriented aspiring Software Developer with strong foundations in full stack development, UX design, and data management. Passionate about building user-centered applications, learning modern frameworks, and solving real-world problems through technology. Eager to contribute and grow in a dynamic team environment while continuously improving technical and professional skills.</div>
 
                 <!-- Location (update the text below to your actual city/country) -->
                 <div class="location" style="margin-top:8px">📍 <span id="location-text">Cape Town, South Africa</span></div>
 
                 <div style="margin-top:10px">
-                    <a href="#projects">Projects</a> · <a href="#skills">Languages</a> · <a href="#contact">Contact</a> ·
+                    <a href="#projects">Projects</a> · <a href="#certificates">Certificates</a> · <a href="#skills">Languages</a> · <a href="#contact">Contact</a> ·
                     <a class="cv-btn" href="assets/CV.pdf" download title="Download CV (PDF)" aria-label="Download CV (PDF)">Download CV</a>
                 </div>
                 <div style="margin-top:8px;color:var(--muted);font-size:0.95rem">
-                    <span id="clock" aria-live="polite" style="color:var(--accent);font-weight:600">--:--:--</span>
+                    <span id="clock" aria-live="polite">--:--:--</span>
                 </div>
             </div>
         </header>
@@ -40,18 +40,116 @@
         <main class="grid">
             <section id="projects" class="card">
                 <h2 style="margin-top:0">Projects</h2>
+            
                 <div class="projects">
                     <article class="project">
-                        <h4><a href="#">Project One — Portfolio Website</a></h4>
-                        <p>Small, responsive personal website built with semantic HTML and modern CSS. Replace this with a short project summary and link to repo.</p>
+                        <h4>
+                            <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="calcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff6b9d"/>
+                                        <stop offset="100%" style="stop-color:#ff8fb3"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="3" y="3" width="18" height="18" rx="3" fill="url(#calcGradient)"/>
+                                <rect x="6" y="6" width="12" height="3" rx="1" fill="white" fill-opacity="0.9"/>
+                                <circle cx="7" cy="12" r="1" fill="white"/>
+                                <circle cx="12" cy="12" r="1" fill="white"/>
+                                <circle cx="17" cy="12" r="1" fill="white"/>
+                                <circle cx="7" cy="16" r="1" fill="white"/>
+                                <circle cx="12" cy="16" r="1" fill="white"/>
+                                <circle cx="17" cy="16" r="1" fill="white"/>
+                            </svg>
+                            <a href="#">Calculator</a>
+                        </h4>
+                        <p>A simple, interactive calculator that allows users to perform basic arithmetic operations: addition, subtraction, multiplication, and division.Users can click buttons or use the keyboard to input numbers and operations.Includes features like clear (AC), equals (=), and possibly decimal point support. <br>
+                            <br>
+                            Technologies Used:
+                            HTML: For structuring the calculator layout (buttons, display screen, etc.)
+                            CSS: For styling the calculator (colors, layout, hover effects, responsiveness)
+                            JavaScript: For functionality:
+                            -Handling user input
+                            -Performing arithmetic calculations
+                            -Updating the display dynamically
+                            -Managing edge cases (like division by zero)
+                            <br>
+                            <br>
+                            How It Works (Logic):
+                            Each button has an event listener in JavaScript.
+                            When a number or operator is clicked, it updates the display.
+                            When “=” is pressed, the input string is evaluated to compute the result.
+                            The result is displayed on the screen instantly without refreshing the page.
+
+                            <br>
+                            <br>
+                            Skills Demonstrated:
+                            DOM Manipulation: Dynamically updating the calculator display
+                            Event Handling: Detecting and responding to button clicks
+                            Conditional Logic & Functions: Handling different operations correctly
+                            UI/UX Design: Clean, intuitive interface for ease of use
+                            Responsive Design: Works on both desktop and mobile screens
+                        </p>
                     </article>
                     <article class="project">
-                        <h4><a href="#">Project Two — To-do App</a></h4>
+                        <h4>
+                            <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="weatherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#60a5fa"/>
+                                        <stop offset="100%" style="stop-color:#93c5fd"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="12" cy="12" r="10" fill="url(#weatherGradient)"/>
+                                <circle cx="12" cy="12" r="4.5" fill="#ffffff"/>
+                                <path d="M12 5V3M12 21v-2M5 12H3M21 12h-2M18.364 18.364l-1.414-1.414M7.05 7.05L5.636 5.636M18.364 5.636L16.95 7.05M7.05 16.95l-1.414 1.414" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <a href="#">Project Two — To-do App</a>
+                        </h4>
                         <p>Interactive to-do list built with vanilla JavaScript. Demonstrates DOM manipulation and localStorage usage.</p>
                     </article>
                     <article class="project">
                         <h4><a href="#">Project Three — API Dashboard</a></h4>
                         <p>Data dashboard consuming a public API, with charts and filtering. Good place to show screenshots and a live demo link.</p>
+                    </article>
+                        <h3 style="margin-top:0.5rem">Technical skills</h3>
+                <div id="technical-skills">
+                    <p>Tools: GitHub, RESTful APIs <br>
+Development Skills: UX/UI Principles, SDLC, Data Input & Processing, App Design, API Integration, Frontend + Backend Basics
+<br>Other Skills: Problem-Solving, Team Collaboration, Communication, Attention to Detail</p>
+                    <p> HTML, CSS, JavaScript,Python, Introductory C# and SQL (through backend module), Beginner-level Angular</p>
+                </div>
+                </div>
+            </section>
+
+            <section id="certificates" class="card">
+                <h2 style="margin-top:0">Certificates</h2>
+                <div class="projects">
+                    <article class="project">
+                        <h4><a href="https://www.shecodes.io/certificates/f8a4c2a71d6cbd3dc290c356e72e7964?_gl=1*4wy5zf*_gcl_au*Nzk2MzMwOTY3LjE3NTYzMTU5MjEuMTU3MTc3MTMzNC4xNzYxNDgxMzU1LjE3NjE0ODEzNTQ." target="_blank" rel="noopener noreferrer">SheCodes Plus Certificate – SheCodes</a></h4>
+                        <p>- Advanced JavaScript (functions, loops, arrays, ES6)
+                        - API integration for live data (e.g., weather apps, quote generators)
+                        - Responsive design and multi-page web applications
+                        - Version control with Git and GitHub
+                        - Building real-world projects with HTML, CSS, and JavaScript
+                        - Improved problem-solving through debugging and code testing</p>
+                    </article>
+                    <article class="project">
+                        <h4><a href="https://www.shecodes.io/certificates/ea27f409a30f504d45c6e93c22ed6b17?_gl=1*1ryx95w*_gcl_au*Nzk2MzMwOTY3LjE3NTYzMTU5MjEuMTU3MTc3MTMzNC4xNzYxNDgxMzU1LjE3NjE0ODEzNTQ." target="_blank" rel="noopener noreferrer">SheCodes Basics Add-on Certificate – SheCodes</a></h4>
+                        <p>- How to combine HTML, CSS, and JavaScript to build interactive features
+                            - DOM manipulation and event handling
+                            - Building mini-projects (interactive landing pages and calculators)
+                            - Practicing clean code and reusability principles</p>
+                    </article>
+                    <article class="project">
+                        <h4><a href="https://www.shecodes.io/certificates/b156d65c02a2c16005db0a7b85b4d906?_gl=1*1cmie7j*_gcl_au*Nzk2MzMwOTY3LjE3NTYzMTU5MjEuMTU3MTc3MTMzNC4xNzYxNDgxMzU1LjE3NjE0ODEzNTQ." target="_blank" rel="noopener noreferrer">SheCodes Basics Certificate – SheCodes</a></h4>
+                        <p>- Fundamentals of HTML, CSS, and JavaScript
+                            - How to create a personal landing page from scratch
+                            - Understanding of coding logic, variables, and simple functions
+                            - Introduction to Git, GitHub, and hosting projects online</p>
+                    </article>
+                    <article class="project">
+                        <h4><a href="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=20f8070ceb&attid=0.1&permmsgid=msg-f:1837615179701835389&th=1980854513fe567d&view=att&zw&disp=inline&saddbat=ANGjdJ_ZfVt5NsW3YIGHy8ki-6gSv_6CcMVng_hvH49UMFlsALDy6GkDC8_6bGxzA4ZlnTnN3tapx8Xee2EXmBV6AP1ZBKk7ELq-LfI6hQ9v3OaBX0sgwRe0uUOdNVTqwTGdQkwwmrhO2VbyuQhkkwDGzlpT7MEPcvGGGyFIOrvxNhLplhmkjLFckby245cqrlj9PHqH7S__kvKf2w-ivk44zEJJ-OqZ-ezOfJ0zaZkk86PZpSeDRXF14bqOrRRa73Sqg4B771LCtMKeBc4IK0k5TfT8KW26D5-pyf4L9HfBYpnp04IvpiZvtUCozvcoyq_13QDuHIwS-Ehq2hX-nuhXj78rheeFIPRPYdpU7yrqX5ZDZpqzBa9Nx19Aa9FPkIZVcKKNHyDrpcaRXOJIudBvk-uqwOaL5oUm_cTUIyjQw5ghPpc-xsPhSrPWh8Bu_czst7CjdwCtqyJqio4A_aRQ18KiaiWpalXS7UyQB6PrZu8Q1OQUek_eoHpRGhdfK4XIYyW-i9uGEcPqBkDKhscvRqeNWrC-R9av8N87uJhCM7Z9jLv0A6_D7PCHPzW8THm-tqzdDn7aDs1POQ3tnbrXXn-6Uvg9JNwuvC5B7X-6qwklWaTyclVPgmOeY9DQz3rcMOcn-7VGYPbOrrjqfWPEE_SAzb7-zDOsfGFxF_hoBaKhZwZ4qJyeDfcwnlF1BTFYWuPnRtg29qHktWqJqsMQ1F0hKnbScsHOcdBWTwED0RciuFV3idH4T8crD9PNZWSPQqnACzIFGOdC2hzNuNslNGWMY6OWKBK8kZasVGtCryaLaqmgDiBnPzqvShKnSUBZKx_FCuscpJWVj7xGYpIGJe1udeZcg20p_-iA4n3X-jxbAVDv_nQYyZxgs3ZQR9xiMIOEV5xmna_135vorC5gCX5aRSZQEItVq_hJDk4CN4pQlIvZctJVYtBfJqrjjARkzOUbvMXw1QQuPMpu7rXpo2zxjCqXzztKDnbWYTGU1yHg8sLE9YqAGM6Q8Snt331BSDOym2imsw1pXLS0q7DyNfITE56qAD1KTayF5g" target="_blank" rel="noopener noreferrer">Certificate in Full Stack Development – FNB App Academy </a></h4>
+                        <p>App Strategies | GitHub & Collaboration | Build an App with HTML (SDLC) | UX Design Principles | Design Thinking | API & Data Processing | User-Centric App Development | Data Management & Analysis | Business Development | Backend Development (Build an API) | AI in Development | Business Funding | App Marketing</p>
                     </article>
                 </div>
             </section>
@@ -60,41 +158,104 @@
                 <h3 style="margin-top:0">Languages & tools</h3>
                 <div class="langs" aria-hidden="false">
                     <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="HTML — MDN" aria-label="HTML documentation (opens in new tab)">
-                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520" role="img" aria-hidden="true">
+                            <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52"/>
+                            <path fill="#ef652a" d="M226 472l149-41 35-394H226"/>
+                            <path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"/>
+                            <path fill="#fff" d="M226 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"/>
+                        </svg>
                         <span>HTML</span>
                     </a>
                     <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" title="CSS — MDN" aria-label="CSS documentation (opens in new tab)">
-                        <img src="assets/langs/css.svg" alt="CSS logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520" role="img" aria-hidden="true">
+                            <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52"/>
+                            <path fill="#30a9dc" d="M226 472l149-41 35-394H226"/>
+                            <path fill="#ecedee" d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z"/>
+                            <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z"/>
+                        </svg>
                         <span>CSS</span>
                     </a>
                     <a class="lang" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" title="JavaScript — MDN" aria-label="JavaScript documentation (opens in new tab)">
-                        <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" role="img" aria-hidden="true">
+                            <rect width="630" height="630" fill="#f7df1e"/>
+                            <path d="M423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"/>
+                        </svg>
                         <span>JavaScript</span>
                     </a>
                     <a class="lang" href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python" aria-label="Python website (opens in new tab)">
-                        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255" role="img" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="python-a" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
+                                    <stop offset="0%" stop-color="#387EB8"/>
+                                    <stop offset="100%" stop-color="#366994"/>
+                                </linearGradient>
+                                <linearGradient id="python-b" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
+                                    <stop offset="0%" stop-color="#FFE052"/>
+                                    <stop offset="100%" stop-color="#FFC331"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#python-a)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z"/>
+                            <path fill="url(#python-b)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z"/>
+                        </svg>
                         <span>Python</span>
                     </a>
                     <a class="lang" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" title="Git" aria-label="Git website (opens in new tab)">
-                        <img src="https://cdn.simpleicons.org/git/F05032" alt="Git logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" role="img" aria-hidden="true">
+                            <path fill="#f03c2e" d="M90.156 41.965 50.036 1.847a5.918 5.918 0 0 0-8.372 0l-8.322 8.322 10.566 10.566a7.03 7.03 0 0 1 7.512 1.566 7.033 7.033 0 0 1 1.562 7.51l10.186 10.187a7.026 7.026 0 0 1 7.51 1.564 7.034 7.034 0 0 1 0 9.95 7.035 7.035 0 0 1-9.95 0 7.029 7.029 0 0 1-1.537-7.687l-9.5-9.5V59.36a7.04 7.04 0 0 1 1.86 1.314 7.035 7.035 0 0 1 0 9.95 7.035 7.035 0 0 1-9.95 0 7.034 7.034 0 0 1 0-9.95 7.015 7.015 0 0 1 2.308-1.539V33.288a7.011 7.011 0 0 1-2.308-1.535 7.034 7.034 0 0 1-1.538-7.686L29.196 13.801 1.847 41.15a5.92 5.92 0 0 0 0 8.371L41.967 89.64a5.918 5.918 0 0 0 8.372 0l39.817-39.816a5.92 5.92 0 0 0 0-8.371"/>
+                        </svg>
                         <span>Git</span>
                     </a>
                     <a class="lang" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="React" aria-label="React website (opens in new tab)">
-                        <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" class="lang-icon">
+                        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20.46348" role="img" aria-hidden="true">
+                            <title>React</title>
+                            <path fill="#00d8ff" d="M18.91 6.633q-.367-.126-.74-.234.062-.252.115-.506c.56-2.72.194-4.912-1.058-5.634-1.199-.692-3.163.025-5.151 1.736q-.292.25-.572.52-.187-.179-.38-.352C9.305.344 7.232-.392 5.99.332c-1.186.692-1.538 2.744-1.039 5.323.116.604.293 1.204.519 1.794q-.278.08-.548.17c-2.7.85-4.428 2.176-4.428 3.746 0 1.604 1.817 3.009 4.584 3.922q.336.111.679.199-.093.377-.166.766c-.48 2.513-.106 4.51 1.076 5.198 1.224.712 3.278-.019 5.276-1.756q.245-.212.48-.442.302.293.62.567c1.939 1.67 3.853 2.344 5.041 1.649 1.222-.713 1.62-2.873 1.104-5.443q-.06-.3-.138-.614.218-.064.428-.133C21.285 14.472 23 13.075 23 11.471c0-1.572-1.759-2.909-4.49-3.773zM12.77 1.727c1.687-1.47 3.267-2.06 3.984-1.621.77.446 1.075 2.254.584 4.62q-.045.212-.1.422a23.478 23.478 0 0 0-3.105-.48 23.118 23.118 0 0 0-1.962-2.447q.296-.282.6-.494zM6.807 1.314c.686-.386 2.203.169 3.803 1.56q.334.29.653.609a23.57 23.57 0 0 0-1.982 2.44 22.887 22.887 0 0 0-3.105.467q-.088-.354-.158-.73v.002c-.403-2.041-.167-3.592.517-4.087.149-.094.324-.167.52-.22zm13.006 10.157c-.318.094-.644.184-.975.268a23.774 23.774 0 0 0-1.159-2.91 23.splbase6 23.splbase6 0 0 0 1.115-2.848c.594.172 1.17.362 1.725.573 1.839.766 3.043 1.78 3.043 2.617 0 .87-1.309 1.781-3.042 2.547a22.892 22.892 0 0 1-.707-.247zm-5.626 4.346a23.168 23.168 0 0 0-1.56-1.91q.758-.029 1.541-.029.798 0 1.575.033a20.909 20.909 0 0 0-1.556 1.906zm-7.246-10.12c.188-.365.386-.73.594-1.091q.344.03.698.042.36.014.72.014.369 0 .73-.015.347-.012.685-.041c.205.357.403.717.59 1.078.185.36.359.723.523 1.087a19.875 19.875 0 0 0-1.096-.055q-.365 0-.73.016-.37.016-.737.048-.37.033-.737.082a23.478 23.478 0 0 0 .525-1.075zm.811 3.796q.484.843 1.026 1.635.543.792 1.14 1.535a23.653 23.653 0 0 1-3.258-.492c.32-1.087.76-2.184 1.309-3.252a23.825 23.825 0 0 1-.217.574zm-1.917 5.026c-1.838-.768-3.037-1.78-3.037-2.618 0-.837 1.199-1.85 3.037-2.617q.523-.217 1.092-.403a23.64 23.64 0 0 0 1.114 2.848 23.41 23.41 0 0 0-1.158 2.908q-.545-.168-1.048-.363zm8.92 6.648q-.211.188-.433.367c-1.613 1.389-3.23 1.98-3.95 1.545-.77-.446-1.064-2.254-.584-4.62q.047-.207.101-.422a23.407 23.407 0 0 0 3.105.481 23.541 23.541 0 0 0 1.962 2.447q-.276.256-.567.493v-.003zm5.004-9.006c1.838.767 3.037 1.78 3.037 2.617 0 .836-1.199 1.85-3.037 2.617q-.575.24-1.2.435a23.833 23.833 0 0 0-1.114-2.848 23.419 23.419 0 0 0 1.158-2.908q.592.201 1.156.435zm-2.836.951q-.314-.558-.642-1.098-.33-.54-.686-1.06a20.18 20.18 0 0 0 1.345 0q-.335.52-.665 1.06-.332.54-.647 1.098h-.001zm0 3.678q.315.559.643 1.098.329.54.685 1.06a20.454 20.454 0 0 0-1.345 0q.336-.52.665-1.06.332-.54.647-1.098zm4.95-11.018c.724-.44 1.854.21 3.027 1.573q.27.314.54.657a23.461 23.461 0 0 0-1.982-2.44 23.195 23.195 0 0 0-3.105-.467q.07-.317.158-.731c.403-2.041.167-3.592-.517-4.087-.151-.094-.326-.167-.522-.22-.686-.386-2.203.169-3.803 1.56q-.334.29-.653.609a23.57 23.57 0 0 0 1.982 2.44 22.887 22.887 0 0 0 3.105.467q.088-.354.158-.73v.002c.403-2.041.167-3.592-.517-4.087-.149-.094-.324-.167-.52-.22z"/>
+                        </svg>
                         <span>React</span>
                     </a>
                 </div>
 
                 <h4 style="margin-top:18px">Contact</h4>
-                <p id="contact" style="margin:0;color:var(--muted)">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <div class="contact-container">
+                    <div class="email-container">
+                        <a href="mailto:your.email@example.com" class="contact-link" title="Send me an email">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                <path fill="currentColor" d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                                <path fill="currentColor" d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                            </svg>
+                            <span>joy.lekgau@gmail.com</span>
+                        </a>
+                    </div>
+                        <div class="phone-container">
+                            <a href="tel:+27123456789" class="contact-link" title="Call me" aria-label="Call Joy Lekgau">
+                                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                    <path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/>
+                                </svg>
+                                <span>+27 72 396 9749</span>
+                            </a>
+                        </div>
+                    
+                    <div id="contact" class="social-links">
+                        <a href="https://github.com/Joy-Lekgau" target="_blank" rel="noopener noreferrer" class="social-link" title="View my projects on GitHub" aria-label="Visit my GitHub profile">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/joy-lekgau-93b6a220a" target="_blank" rel="noopener noreferrer" class="social-link" title="Connect on LinkedIn" aria-label="Visit my LinkedIn profile">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </aside>
         </main>
 
         <footer>
-            <small>Built with care — replace sample content with your own projects, images and links.</small>
+            <small></small>
         </footer>
-    </div>
+              <small>© 2025 Joy Lekgau • Built with HTML, CSS & JavaScript</small>
 
-            <script src="src/scripts.js"></script>
+            <script src="js/scripts.js"></script>
 </body>
 </html>

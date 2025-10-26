@@ -1,39 +1,449 @@
-:root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#60a5fa}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,#071023 0%,#071b2b 100%);color:#e6eef8;line-height:1.4}
-.container{max-width:980px;margin:32px auto;padding:24px}
-header{display:flex;gap:20px;align-items:center}
-.avatar{width:120px;height:120px;border-radius:14px;flex:0 0 120px;overflow:hidden;border:2px solid rgba(255,255,255,0.06);background:linear-gradient(135deg,#0b1220,#12243a);display:grid;place-items:center}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.name{font-size:1.5rem;font-weight:700;margin:0}
-.tagline{color:var(--muted);margin-top:6px}
-.grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:22px}
-@media(min-width:820px){.grid{grid-template-columns:2fr 1fr}}
-.card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.projects{display:grid;gap:12px}
-.project{display:flex;flex-direction:column;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border-radius:10px}
-.project h4{margin:0 0 6px 0}
-.project p{margin:0;color:var(--muted);font-size:0.95rem}
-.langs{display:flex;flex-wrap:wrap;gap:8px}
-.lang{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-weight:600;color:#e6eef8;display:inline-flex;align-items:center;gap:8px}
-.lang-icon{width:28px;height:28px;display:block;flex:0 0 28px;border-radius:6px}
-.lang span{font-size:0.95rem}
-/* Interactive badge styles */
-.lang{transition:transform 160ms ease,box-shadow 160ms ease,background-color 160ms ease}
-.lang:hover,.lang:focus{transform:translateY(-3px);box-shadow:0 6px 18px rgba(2,6,23,0.6);background-color:rgba(255,255,255,0.03);outline:none}
-.lang:focus{box-shadow:0 0 0 4px rgba(96,165,250,0.12)}
-.lang img{display:block}
-.lang[aria-label]{cursor:pointer}
+/* === Color variables (edit these to change the theme) === */
+:root {
+  --bg: #1a365d;
+  --card: rgba(255, 255, 255, 0.1);
+  --muted: rgba(255, 255, 255, 0.88);
+  /* Bright accents to match your energy */
+  --accent: #ff6b6b;         /* vivid coral/pink */
+  --accent-2: #ffd36b;       /* warm yellow */
+  --accent-3: #7efcff;       /* bright cyan */
+  --text: #ffffff;
+  --email: #ffd36b;          /* make email/CTA warm and energetic */
+  --link-hover: #ffb86b;
+}
 
-/* CV download button */
-.cv-btn{display:inline-block;margin-left:8px;padding:6px 10px;background:var(--accent);color:#04263b;font-weight:700;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.06)}
-.cv-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(2,6,23,0.45)}
-.cv-btn:focus{outline:3px solid rgba(96,165,250,0.22);outline-offset:3px}
+/* === Basic reset and typography === */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 
-/* Location styling */
-.location{color:var(--muted);font-size:0.95rem;display:inline-flex;align-items:center;gap:8px}
-.location span{font-weight:600;color:#e6eef8}
-a{color:var(--accent);text-decoration:none}
-a:focus{outline:3px solid rgba(96,165,250,0.25);outline-offset:3px;border-radius:6px}
-footer{color:var(--muted);font-size:0.9rem;margin-top:20px;text-align:center}
+body {
+  font-family: Inter, 'Segoe UI', Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: linear-gradient(90.6deg, rgb(59, 158, 255) -1.2%, rgb(246, 135, 255) 91.6%);
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* === Layout === */
+.container { 
+  max-width: 1080px; 
+  margin: 48px auto; 
+  padding: 32px; 
+}
+
+/* === Header === */
+header { 
+  display: flex; 
+  gap: 20px; 
+  align-items: center; 
+}
+
+.avatar { 
+  width: 240px; 
+  height: 240px; 
+  border-radius: 24px; 
+  flex: 0 0 240px; 
+  overflow: hidden; 
+  border: 4px solid rgba(255,255,255,0.15); 
+  background: linear-gradient(135deg,#0b1220,#12243a); 
+  display: grid; 
+  place-items: center;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+}
+
+.avatar img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  display: block;
+  transform: scale(1.1);
+}
+
+.name { 
+  font-size: 2rem; 
+  font-weight: 700; 
+  margin: 0;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #ffffff, #e2e8f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline { 
+  color: var(--muted); 
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* === Clock / time styling === */
+#clock {
+  display: inline-block;
+  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, monospace;
+  font-weight: 800;
+  color: var(--text);
+  background: rgba(255,255,255,0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12), 0 2px 8px rgba(255,107,107,0.04);
+}
+
+#clock.small {
+  font-size: 0.95rem;
+  padding: 4px 8px;
+}
+
+/* === Main grid === */
+.grid { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 18px; 
+  margin-top: 22px; 
+}
+
+@media (min-width: 820px) { 
+  .grid { 
+    grid-template-columns: 2fr 1fr; 
+  } 
+}
+
+/* === Cards === */
+.card { 
+  background: rgba(255,255,255,0.15); 
+  padding: 18px; 
+  border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+}
+
+/* === Projects and Certificates === */
+h2, h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after, h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 3rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.projects { 
+  display: grid; 
+  gap: 16px; 
+}
+
+.project { 
+  display: flex; 
+  flex-direction: column; 
+  padding: 18px 24px; 
+  background: rgba(255,255,255,0.03); 
+  border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 30px rgba(255,107,107,0.07), 0 4px 8px rgba(0,0,0,0.12);
+}
+
+#certificates .project {
+  position: relative;
+  overflow: hidden;
+}
+
+#certificates .project::before {
+  content: '🏆';
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+#certificates .project:hover::before {
+  opacity: 1;
+}
+
+.project h4 { 
+  margin: 0 0 6px 0; 
+}
+
+.project-icon {
+  width: 1.4em;
+  height: 1.4em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project:hover .project-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.project p { 
+  margin: 0; 
+  color: var(--muted); 
+  font-size: 0.95rem; 
+}
+
+.project a {
+  color: var(--email);
+  font-weight: 600;
+}
+
+.project a:hover {
+  color: var(--link-hover);
+}
+
+/* === Language badges === */
+.langs { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+}
+
+.lang {
+  background: rgba(255,255,255,0.08);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lang:hover, 
+.lang:focus { 
+  transform: translateY(-2px); 
+  background: linear-gradient(90deg, rgba(255,107,107,0.08), rgba(255,211,107,0.06));
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 8px 18px rgba(255,107,107,0.12);
+  outline: none; 
+}
+
+.lang:focus { 
+  box-shadow: 0 0 0 4px rgba(96,165,250,0.12); 
+}
+
+.lang-icon { 
+  width: 28px; 
+  height: 28px; 
+  display: block; 
+  flex: 0 0 28px; 
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lang span { 
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.lang img { 
+  display: block; 
+}
+
+.lang[aria-label] { 
+  cursor: pointer; 
+}
+
+/* === CV download button === */
+.cv-btn { 
+  display: inline-block; 
+  margin-left: 8px; 
+  padding: 8px 14px; 
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)); 
+  color: #1a1a1a; 
+  font-weight: 800; 
+  border-radius: 12px; 
+  text-decoration: none; 
+  border: 0;
+  box-shadow: 0 8px 22px rgba(255,107,107,0.18);
+  transition: all 0.22s ease;
+}
+
+.cv-btn:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 14px 40px rgba(255,107,107,0.22);
+  filter: saturate(1.08) brightness(1.02);
+}
+
+.cv-btn:focus { 
+  outline: 3px solid rgba(96,165,250,0.22); 
+  outline-offset: 3px; 
+}
+
+/* === Location styling === */
+.location { 
+  color: var(--muted); 
+  font-size: 0.95rem; 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.location span { 
+  font-weight: 600; 
+  color: #e6eef8; 
+}
+
+/* === Contact Section === */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.email-container {
+  margin-bottom: 8px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: fit-content;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.contact-link:hover {
+  background: rgba(234, 88, 12, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+/* === Social Links === */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* GitHub hover style */
+.social-link[href*="github"]:hover {
+  background: rgba(36, 41, 47, 0.9);
+  box-shadow: 0 4px 12px rgba(36, 41, 47, 0.3);
+}
+
+/* LinkedIn hover style */
+.social-link[href*="linkedin"]:hover {
+  background: rgba(10, 102, 194, 0.9);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .contact-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .email-container {
+    margin-bottom: 0;
+  }
+}
+
+/* === Links and footer === */
+a { 
+  color: var(--text); 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+a[href^="mailto:"] {
+  color: var(--email);
+  font-weight: 600;
+}
+
+a[href^="mailto:"]:hover {
+  color: var(--link-hover);
+}
+
+a:focus { 
+  outline: 3px solid rgba(59, 158, 255, 0.3); 
+  outline-offset: 3px; 
+  border-radius: 6px; 
+}
+
+footer { 
+  color: var(--muted); 
+  font-size: 0.9rem; 
+  margin-top: 20px; 
+  text-align: center; 
+}
